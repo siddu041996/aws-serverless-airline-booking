@@ -126,9 +126,10 @@ _install_os_packages:
 #	export PATH="/root/.pyenv/shims:$PATH"
 #	export PATH="/usr/bin/:/usr/bin/:$PATH"
 
-	which python3.7
+	which python3
 	which python3.10
 	which python3.9
+	which python3.7
 
 	python3.7 -m pip install --upgrade --user cfn-lint aws-sam-cli
 #	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
