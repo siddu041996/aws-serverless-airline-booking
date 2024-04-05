@@ -119,11 +119,11 @@ _install_os_packages:
 #python 3.9 newly added NS
 	sudo yum install python3.9-pip -y
 
-	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli (older line)
+	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
 #NS Python path set (below for lines Added by NS )
 #	export PATH = /usr/local/python3.7/bin:/usr/local/python3.9/bin:$(PATH)
-#	python3.7 -m pip install --upgrade --user cfn-lint	
+	python3.7 -m pip install --upgrade --user cfn-lint	
 #	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
 define HELP_MESSAGE
