@@ -126,53 +126,11 @@ _install_os_packages:
 #	export PATH="/root/.pyenv/shims:$PATH"
 #	export PATH="/usr/bin/:/usr/bin/:$PATH"
 
-#	python3.7 -m pip install --upgrade --user cfn-lint	
+	which python3
+
+	python3.7 -m pip install --upgrade --user cfn-lint aws-sam-cli
 #	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
-# Define variables
-PYTHON37_VENV := venv_py37
-PYTHON39_VENV := venv_py39
-PYTHON37_PIP := $(PYTHON37_VENV)/bin/pip
-PYTHON39_PIP := $(PYTHON39_VENV)/bin/pip
-CFLINT_VERSION := latest  # Change to a specific version if needed
-AWS_SAM_CLI_VERSION := latest  # Change to a specific version if needed
-
-# Define targets
-
-.PHONY: all install_py37 install_py39
-
-all: install_py37 install_py39
-
-install_py37: $(PYTHON37_VENV)
-	@echo "Creating virtual environment for Python 3.7..."
-	python3.7 -m venv $(PYTHON37_VENV)
-	@echo "Activating virtual environment..."
-	source $(PYTHON37_VENV)/bin/activate
-	@echo "Installing cfn-lint..."
-	$(PYTHON37_PIP) install --upgrade cfn-lint==$(CFLINT_VERSION)
-	@echo "Installation complete for Python 3.7."
-
-install_py39: $(PYTHON39_VENV)
-	@echo "Creating virtual environment for Python 3.9..."
-	python3.9 -m venv $(PYTHON39_VENV)
-	@echo "Activating virtual environment..."
-	source $(PYTHON39_VENV)/bin/activate
-	@echo "Installing cfn-lint and aws-sam-cli..."
-	$(PYTHON39_PIP) install --upgrade cfn-lint==$(CFLINT_VERSION) aws-sam-cli==$(AWS_SAM_CLI_VERSION)
-	@echo "Installation complete for Python 3.9."
-
-$(PYTHON37_VENV):
-	@echo "Python 3.7 virtual environment already exists. Skipping creation."
-
-$(PYTHON39_VENV):
-	@echo "Python 3.9 virtual environment already exists. Skipping creation."
-
-.PHONY: clean
-
-clean:
-	@echo "Removing virtual environments..."
-	rm -rf $(PYTHON37_VENV) $(PYTHON39_VENV)
-	@echo "Virtual environments removed."
 
 
 define HELP_MESSAGE
