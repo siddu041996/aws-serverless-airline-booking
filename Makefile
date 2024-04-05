@@ -117,7 +117,7 @@ _install_os_packages:
 	sudo yum install jq -y
 	$(info [*] Upgrading Python SAM CLI and CloudFormation linter to the latest version...)
 #python 3.9 newly added NS
-#	sudo yum install python3.9-pip -y
+	sudo yum install python3.7-pip -y
 
 #	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
@@ -128,12 +128,11 @@ _install_os_packages:
 
 	which python3
 	which python3.10
-	which python3.9
+	
 
 	python3 --version  # May point to the default version (e.g., 3.7)
 	python3.7 --version
 
-	python3.9 --version
 	which python3.7
 
 	python3.7 -m pip install --upgrade --user cfn-lint aws-sam-cli
