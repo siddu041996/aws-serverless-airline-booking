@@ -116,24 +116,13 @@ _install_os_packages:
 	$(info [*] Installing jq...)
 	sudo yum install jq -y
 	$(info [*] Upgrading Python SAM CLI and CloudFormation linter to the latest version...)
-
-#	sudo yum install python3.7-pip -y
-
-
-#	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
-
-#NS Python path set (below for lines Added by NS )
-#	export PATH="/root/.pyenv/versions/3.7/bin:/root/.pyenv/versions/3.9/bin:$PATH"
-#	export PATH="/root/.pyenv/shims:$PATH"
-#	export PATH="/usr/bin/:/usr/bin/:$PATH"
 	sudo yum install wget -y
 	sudo yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel
 	cd /usr/src
     sudo wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
 	sudo tar xzf Python-3.7.9.tgz
 	cd Python-3.7.9 && sudo ./configure --enable-optimizations
-    sudo make altinstall
-
+	sudo make altinstall
 	which python3
 	which python3.10
 	
