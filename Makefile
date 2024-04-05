@@ -123,6 +123,9 @@ _install_os_packages:
 
 #NS Python path set (below for lines Added by NS )
 	export PATH="/root/.pyenv/versions/3.7/bin:/root/.pyenv/versions/3.9/bin:$PATH"
+	export PATH="/root/.pyenv/shims:$PATH"
+	export PATH="/usr/bin/:/usr/bin/:$PATH"
+
 #	python3.7 -m pip install --upgrade --user cfn-lint	
 	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
