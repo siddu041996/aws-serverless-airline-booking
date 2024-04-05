@@ -127,11 +127,12 @@ _install_os_packages:
 	which python3.10
 	echo $(which python)
 	echo $(which python3.7)
-
-	export PATH="/usr/bin/python3.7/bin:$PATH"
+	which python3
+	export PATH="/usr/bin/python3.7:$PATH"
 
 	python3 --version  # May point to the default version (e.g., 3.7)
 	python3.7 --version
+	which python3.7
 
 	python3 -m pip install --upgrade --user cfn-lint aws-sam-cli
 #	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
