@@ -122,8 +122,8 @@ _install_os_packages:
 #	python3 -m pip install --upgrade --user cfn-lint aws-sam-cli (older line)
 
 #NS Python path set (below for lines Added by NS )
-	export PATH := /path/to/python3.7/bin:$(PATH)
-	export PATH := /path/to/python3.9/bin:$(PATH)
+	export PATH := /usr/local/python3.7/bin:$(PATH)
+	export PATH := /usr/local/python3.9/bin:$(PATH)
 	python3.7 -m pip install --upgrade --user cfn-lint	
 	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
