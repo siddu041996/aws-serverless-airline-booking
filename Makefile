@@ -125,15 +125,13 @@ _install_os_packages:
 	sudo make altinstall
 	which python3
 	which python3.10
-	
-	
+	echo $(which python)
+	echo $(which python3.7)
 
 	python3 --version  # May point to the default version (e.g., 3.7)
 	python3.7 --version
 
-	which python3.7
-
-	python3.7 -m pip install --upgrade --user cfn-lint aws-sam-cli
+	python3 -m pip install --upgrade --user cfn-lint aws-sam-cli
 #	python3.9 -m pip install --upgrade --user cfn-lint aws-sam-cli
 
 
