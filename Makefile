@@ -128,7 +128,8 @@ _install_os_packages:
 	echo $(which python)
 	echo $(which python3.7)
 	which python3
-	export PATH="/usr/bin/python3.7:$PATH"
+#	export PATH="/usr/bin/python3.7:$PATH"
+	export PATH="/root/.pyenv/shims/python3.7:$PATH"
 
 	python3 --version  # May point to the default version (e.g., 3.7)
 	python3.7 --version
