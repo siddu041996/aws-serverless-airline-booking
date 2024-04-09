@@ -25,7 +25,8 @@ Resources:
         SemanticVersion: 4.4.1
       Parameters:
         EnableInstantCapture: "false"
-        SSMParameterPath: !Sub "${Stage}/service/payment/stripe/secretKey"
+        SSMParameterPath: 
+          Fn::Sub: ${Stage}/service/payment/stripe/secretKey    
 
   CollectPayment:
     Type: AWS::Serverless::Function
