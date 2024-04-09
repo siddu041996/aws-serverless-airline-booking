@@ -26,8 +26,6 @@ backend:
         - export BOOKING_TABLE_NAME=$(jq -r '.dataSources[] | select(.name == "BookingTable") | .dynamodbConfig.tableName' datasources.json)
         - export STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY:-UNDEFINED}
         - export STRIPE_PUBLIC_KEY=${STRIPE_PUBLIC_KEY:-UNDEFINED}
-        - export STRIPE_SECRET_KEY=sk_test_51P0zMVSDxviyaFh1pnDj1FOoXT4S16OGmdHfkyJV67fgLxpXOrpHI9PyIFnYAXVyWO9GBp44UkKQEftXdH8jM3mA00okSJuEoz
-        - export STRIPE_PUBLIC_KEY=pk_test_51P0zMVSDxviyaFh1MtUtvxvTQIg5EkyoWv52aiexE2fWR11ZZZHermqTUcUoXRz4erxVgQIthpAIAEbZClun4HMu003EoxJQ1j
         ##
         # Export key deployed resources to System Manager Parameter Store
         ##
