@@ -5,7 +5,7 @@ Payment service integrates with Stripe and provides a REST API for pre-authoriza
 
 ![Payment Infrastructure Architecture](../../../media/payment-infra-architecture.png)
 
-Payment is comprised of a [Serverless Application Repository App named API Lambda Stripe Charge](arn:aws:serverlessrepo:us-east-1:375983427419:applications/api-lambda-stripe-charge) and Python Lambda functions. 
+Payment is comprised of a [Serverless Application Repository App named API Lambda Stripe Charge](arn:aws:serverlessrepo:ap-south-1:905418366688:applications/api-lambda-stripe-charge) and Python Lambda functions. 
 
 ### SAR Lambda Stripe Charge
 

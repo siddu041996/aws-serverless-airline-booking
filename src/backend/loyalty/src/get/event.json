@@ -21,7 +21,7 @@
     "CloudFront-Is-SmartTV-Viewer": "false",
     "CloudFront-Is-Tablet-Viewer": "false",
     "CloudFront-Viewer-Country": "US",
-    "Host": "1234567890.execute-api.us-east-1.amazonaws.com",
+    "Host": "1234567890.execute-api.ap-south-1.amazonaws.com",
     "Upgrade-Insecure-Requests": "1",
     "User-Agent": "Custom User Agent String",
     "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
@@ -31,7 +31,7 @@
     "X-Forwarded-Proto": "https"
   },
   "requestContext": {
-    "accountId": "123456789012",
+    "accountId": "905418366688",
     "resourceId": "123456",
     "stage": "prod",
     "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",

@@ -22,7 +22,7 @@ Resources:
     Type: AWS::Serverless::Application
     Properties:
       Location:
-        ApplicationId: arn:aws:serverlessrepo:us-east-1:374852340823:applications/async-custom-metrics
+        ApplicationId: arn:aws:serverlessrepo:ap-south-1:374852340823:applications/async-custom-metrics
         SemanticVersion: 1.7.0
       Parameters:
         # What's the event source you will intend to use? If logs are pushed from CloudWatch Logs to Lambda directly, then use 'Lambda'. If logs are pushed to a Kinesis Stream first, then use 'Kinesis'. Other event sources are not supported (yet).
@@ -44,7 +44,7 @@ Resources:
     Type: AWS::Serverless::Application
     Properties:
       Location:
-        ApplicationId: arn:aws:serverlessrepo:us-east-1:374852340823:applications/auto-set-log-group-retention
+        ApplicationId: arn:aws:serverlessrepo:ap-south-1:374852340823:applications/auto-set-log-group-retention
         SemanticVersion: 1.4.0
       Parameters:
         # The number of days to retain logs in CloudWatch Logs for.
@@ -55,7 +55,7 @@ Resources:
     Type: AWS::Serverless::Application
     Properties:
       Location:
-        ApplicationId: arn:aws:serverlessrepo:us-east-1:374852340823:applications/auto-subscribe-log-group-to-arn
+        ApplicationId: arn:aws:serverlessrepo:ap-south-1:374852340823:applications/auto-subscribe-log-group-to-arn
         SemanticVersion: 1.11.1
       Parameters:
         # The ARN of the Lambda function or Kinesis stream to subscribe a newly created CloudWatch log group to
