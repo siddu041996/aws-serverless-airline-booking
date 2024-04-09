@@ -21,12 +21,12 @@ Resources:
     Type: AWS::Serverless::Application
     Properties:
       Location:
-        ApplicationId: arn:aws:serverlessrepo:ap-south-1:905418366688:applications/api-lambda-stripe-charge
+        ApplicationId: arn:aws:serverlessrepo:us-east-1:375983427419:applications/api-lambda-stripe-charge
         SemanticVersion: 4.4.1
       Parameters:
         EnableInstantCapture: "false"
         SSMParameterPath: !Sub ${Stage}/service/payment/stripe/secretKey
-        
+
 
   CollectPayment:
     Type: AWS::Serverless::Function
