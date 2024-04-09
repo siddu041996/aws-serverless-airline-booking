@@ -27,7 +27,6 @@ Resources:
         EnableInstantCapture: "false"
         SSMParameterPath: !Sub "${Stage}/service/payment/stripe/secretKey"
 
-
   CollectPayment:
     Type: AWS::Serverless::Function
     Properties:
