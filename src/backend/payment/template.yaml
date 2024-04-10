@@ -22,7 +22,7 @@ Resources:
     Properties:
       Location:
         ApplicationId: arn:aws:serverlessrepo:us-east-1:375983427419:applications/api-lambda-stripe-charge
-        SemanticVersion: 4.4.3
+        SemanticVersion: 4.4.2
       Parameters:
         EnableInstantCapture: "false"
         SSMParameterPath: 
