@@ -30,9 +30,9 @@ Parameters:
         Type: AWS::SSM::Parameter::Value<String>
         Description: Parameter Name for Collect Payment Function ARN
 
-    RefundPaymentFunction:
-        Type: AWS::SSM::Parameter::Value<String>
-        Description: Parameter Name for Refund Payment Function ARN
+#    RefundPaymentFunction:
+#        Type: AWS::SSM::Parameter::Value<String>
+#        Description: Parameter Name for Refund Payment Function ARN
 
     AppsyncApiId:
         Type: AWS::SSM::Parameter::Value<String>
