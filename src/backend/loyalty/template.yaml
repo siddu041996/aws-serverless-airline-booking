@@ -157,6 +157,7 @@ Resources:
                   Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${GetFunc.Arn}/invocations
 
   # Resources for API Gateway integration with AppSync
+  
 
   AppsyncLoyaltyRestApiIamRole:
     Type: AWS::IAM::Role
