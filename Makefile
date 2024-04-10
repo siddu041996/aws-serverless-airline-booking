@@ -20,21 +20,21 @@ init: ##=> Install OS deps and dev tools
 
 deploy: ##=> Deploy services
 	$(info [*] Deploying...)
-	$(MAKE) deploy.payment
+#	$(MAKE) deploy.payment
 	$(MAKE) deploy.booking
 	$(MAKE) deploy.loyalty
 	$(MAKE) deploy.log-processing
 
 delete: ##=> Delete services
 	$(MAKE) delete.booking
-	$(MAKE) delete.payment
+#	$(MAKE) delete.payment
 	$(MAKE) delete.loyalty
 	$(MAKE) delete.log-processing
 
 delete.booking: ##=> Delete booking service
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-booking-$${AWS_BRANCH}
 
-delete.payment: ##=> Delete payment service
+#delete.payment: ##=> Delete payment service
 	aws cloudformation delete-stack --stack-name $${STACK_NAME}-payment-$${AWS_BRANCH}
 
 delete.loyalty: ##=> Delete booking service
