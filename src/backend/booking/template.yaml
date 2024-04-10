@@ -26,9 +26,9 @@ Parameters:
         Type: String
         Description: Environment stage or git branch
 
-    CollectPaymentFunction:
-        Type: AWS::SSM::Parameter::Value<String>
-        Description: Parameter Name for Collect Payment Function ARN
+#    CollectPaymentFunction:
+#        Type: AWS::SSM::Parameter::Value<String>
+#        Description: Parameter Name for Collect Payment Function ARN
 
 #    RefundPaymentFunction:
 #        Type: AWS::SSM::Parameter::Value<String>
